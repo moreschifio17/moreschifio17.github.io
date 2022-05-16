@@ -14,14 +14,14 @@ a {
     text-decoration: none;
 }
 
-#perfil{
+#perfil { 
     width:120px;
     height:120px;
     border-radius:70px;
 
 }
 
-.color{
+.color {
     color: #549DA0;
 }
 
@@ -78,7 +78,7 @@ section {
     width: 20%;
 }
 
-.feature .images{
+.feature .images {
     width: 40%;
 }
 
