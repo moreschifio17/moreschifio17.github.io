@@ -1,182 +1,784 @@
-<!DOCTYPE html>
-<html lang="es">
+﻿<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Fiorella Moreschi: about me">
-  <meta property="og:description" content="Welcome to my Landing page">
-  <meta property="og:image" content="../images/hacker.png">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="./images/hacker.png" type="image/x-icon">
-  <title>Fiorella Moreschi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fioreschi Dev</title>
+    <meta property="og:title" content="Fiorella Moreschi: about me">
+    <meta name="description" content="Showcasing my creative work and professional services for potential clients">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/hacker.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(90deg, #549da0, #284b63);
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes floatAutomation {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        @keyframes pulseAutomation {
+            0%,
+            100% {
+                opacity: 0.35;
+                transform: scale(0.92);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .automation-float {
+            animation: floatAutomation 5s ease-in-out infinite;
+        }
+
+        .automation-float-delay {
+            animation: floatAutomation 5s ease-in-out infinite 1.2s;
+        }
+
+        .automation-pulse {
+            animation: pulseAutomation 2s ease-in-out infinite;
+        }
+    </style>
 </head>
 
-<body>
-  <header>
-    <div class="container" id="home">
-      <h1>Gianina Fiorella Benitez Moreschi</h1>
-      <div class="container">
-        <div class="feature">
-          <img id="perfil" src="images/perfil.png" alt="perfil">
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-[#549da0] shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-xl font-bold text-white">Fioreschi Dev</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#home" class="text-white hover:text-gray-200 px-3 py-2 font-medium">Home</a>
+                        <a href="#projects" class="text-white hover:text-gray-200 px-3 py-2 font-medium">Projects</a>
+                        <a href="#services" class="text-white hover:text-gray-200 px-3 py-2 font-medium">Services</a>
+                        <a href="#schedule" class="text-white hover:text-gray-200 px-3 py-2 font-medium">Schedule</a>
+                        <a href="#about" class="text-white hover:text-gray-200 px-3 py-2 font-medium">About</a>
+                        <a href="#contact" class="text-white hover:text-gray-200 px-3 py-2 font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-white hover:text-gray-200">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-      <h2>About me</h2>
-      <h3>
-        I have 2 years of experience and I'm currently completing my degree in Systems. <br>
-        I specialize in <b class="about-me">developing web applications.</b> My expertise includes
-        <i>HTML, CSS, JS, PHP, Laravel, Python, Django, Bootstrap, MySQL, PostgreSQL, Git, GitLab and UML</i>.
-      </h3>
-      
-      <a class="btn" href="./pdf/Resume-Gianina-Benitez-Web-Developer.pdf">Download Resume</a>
-    </div>
-  </header>
+    </nav>
 
-  <section class="features" id="portfolio">
-    <blockquote class="container">
-      <p class="color">Portfolio</p>
-    </blockquote>
-    <div class=" feature images">
-      <img id="slide" src="https://66b6e8ce712ea1c793d763f2--relaxed-fox-66ffc9.netlify.app/assets/rick-morty-DCEzb_Ym.png" alt="" />
-      <p><a href="https://66b6e8ce712ea1c793d763f2--relaxed-fox-66ffc9.netlify.app/" target="_blank" rel="noopener noreferrer">React - API Rick & Morty</a></p>
-    </div>
-    <div class=" feature images">
-      <img id="slide" src="images/tex.png" alt="" />
-      <p><a href="https://github.com/moreschifio17/latex/blob/master/semana1.pdf" target="_blank" rel="noopener noreferrer">Algebra of Propositions</a></p>
-    </div>
-    <div class=" feature images">
-      <img id="slide" src="images/php.png" alt="" />
-      <p><a href="https://vimeo.com/1016871751?share=copy" target="_blank" rel="noopener noreferrer">Dashboard- Cruds </a></p>
-    </div>
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    Hi, I'm <span class="gradient-text">Fiorella</span><br>
+                    <span class="text-gray-600">Developer Professional</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg">
+                    I help businesses and individuals bring their ideas to life through exceptional design and
+                    development services.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact"
+                        class="bg-[#549da0] hover:bg-[#284b63] text-white px-6 py-3 rounded-lg font-medium transition duration-300">
+                        Get in Touch
+                    </a>
+                    <a href="#projects"
+                        class="border border-gray-300 hover:border-[#468486] text-gray-700 hover:text-[#468486] px-6 py-3 rounded-lg font-medium transition duration-300">
+                        View My Work
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div
+                        class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center">
+                        <img src="https://moreschifio17.github.io/images/perfil.png" alt="Profile"
+                            class="w-60 h-60 md:w-72 md:h-72 rounded-full object-cover border-4 border-white">
+                    </div>
+                    <div class="absolute -bottom-5 -right-5 bg-white p-3 rounded-full shadow-lg">
+                        <div class="bg-[#468486] text-white p-3 rounded-full">
+                            <i data-feather="award"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </section>
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Featured Projects</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Here are some of my best works that showcase my skills and
+                    expertise</p>
+            </div>
 
-  <section class="quote" id="education">
-    <blockquote class="container">
-      <p>Education</p>
-    </blockquote>
-    <div class="container">
-      <p>Universidad Tecnológica Intercontinental</p>
-      <p><i>Bachelor's Degree in Computer Systems Analysis, Present</i></p>
-    </div>
-  </section>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg relative">
+                    <img src="images/high-school.png" alt="Project 1" class="w-full h-64 object-cover">
+                    <div
+                        class="project-overlay absolute inset-0 bg-[#284b63] bg-opacity-90 flex flex-col justify-center p-6 opacity-0 transform translate-y-4 transition-all duration-300">
+                        <h3 class="text-white text-xl font-bold mb-2">High School Website</h3>
+                        <p class="text-indigo-100 mb-4">A responsive website for a local high school with news and
+                            events</p>
+                        <div class="flex space-x-3">
+                            <a href="https://cele.edu.py" target="_blank" class="bg-white text-[#284b63] px-4 py-2 rounded-md font-medium">View Demo</a>
+                        </div>
+                    </div>
+                </div>
 
-  <section class="features" id="habilities">
-    <div class="container">
+                <!-- Project 2 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg relative">
+                    <img src="images/mockup-payment.png" alt="Project 2" class="w-full h-64 object-cover">
+                    <div
+                        class="project-overlay absolute inset-0 bg-[#284b63] bg-opacity-90 flex flex-col justify-center p-6 opacity-0 transform translate-y-4 transition-all duration-300">
+                        <h3 class="text-white text-xl font-bold mb-2">Professional Trading Tools Website</h3>
+                        <p class="text-indigo-100 mb-4">Advanced trading tools for professional investors</p>
+                        <div class="flex space-x-3">
+                            <span class="bg-white text-[#284b63] px-4 py-2 rounded-md font-medium">Client project - no longer live</span>
+                        </div>
+                    </div>
+                </div>
 
-      <blockquote class="container">
-        <p class="color">Habilities</p>
-      </blockquote>
+                <!-- Project 3 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg relative">
+                    <img src="images/mockup-taskpanel-app-netlify.png" alt="Project 3" class="w-full h-64 object-cover">
+                    <div
+                        class="project-overlay absolute inset-0 bg-[#284b63] bg-opacity-90 flex flex-col justify-center p-6 opacity-0 transform translate-y-4 transition-all duration-300">
+                        <h3 class="text-white text-xl font-bold mb-2">Task Panel App</h3>
+                        <p class="text-indigo-100 mb-4">A task management application for organizing and tracking daily activities</p>
+                        <div class="flex space-x-3">
+                            <a href="https://taskpanel-app.netlify.app/" target="_blank" class="bg-white text-[#284b63] px-4 py-2 rounded-md font-medium">View Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-      <div class="feature">
-        <img src="images/html-5.png" alt="" />
+        </div>
+    </section>
 
-      </div>
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">My Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Professional solutions tailored to your business needs</p>
+            </div>
 
-      <div class="feature">
-        <img src="images/css-3.png" alt="" />
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-[#468486]/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="layout" class="text-[#468486] w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">UI/UX Design</h3>
+                    <p class="text-gray-600 mb-4">Beautiful, intuitive interfaces that enhance user experience and drive
+                        engagement.</p>
+                </div>
 
-      </div>
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-[#468486]/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="code" class="text-[#468486] w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Web Development</h3>
+                    <p class="text-gray-600 mb-4">Custom websites built with modern technologies for performance and
+                        scalability.</p>
 
-      <div class="feature">
-        <img src="images/js.png" alt="" />
+                </div>
 
-      </div>
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-[#468486]/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="smartphone" class="text-[#468486] w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Mobile App Design</h3>
+                    <p class="text-gray-600 mb-4">Engaging mobile experiences designed specifically for iOS and Android
+                        platforms.</p>
 
-      <div class="feature">
-        <img src="images/bootstrap.png" alt="" />
+                </div>
+            </div>
 
-      </div>
+            <div class="mt-12 bg-white rounded-xl shadow-md p-8">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-6 md:mb-0">
+                        <h3 class="text-xl font-bold mb-2">Need something custom?</h3>
+                        <p class="text-gray-600">Let's discuss your project requirements and create a tailored solution.
+                        </p>
+                    </div>
+                    <div class="md:w-1/3 flex justify-end">
+                        <a href="#contact"
+                            class="bg-[#468486] hover:bg-[#284b63] text-white px-6 py-3 rounded-lg font-medium transition duration-300">
+                            Get a Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="feature">
-        <img src="images/php.png" alt="" />
+    <!-- Process Section -->
+    <section id="process" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">How I Work</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A clear and collaborative process to move from idea to launch with confidence.</p>
+            </div>
 
-      </div>
-      <div class="feature">
-        <img src="images/java.png" alt="" />
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-sm">
+                    <div class="bg-[#468486]/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-[#468486] text-xl font-bold">01</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-[#284b63]">Discovery</h3>
+                    <p class="text-gray-600">I start by understanding your goals, your audience, and what the project needs to achieve.</p>
+                </div>
 
-      </div>
+                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-sm">
+                    <div class="bg-[#468486]/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-[#468486] text-xl font-bold">02</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-[#284b63]">Design</h3>
+                    <p class="text-gray-600">I shape the visual direction and structure to make the experience clear, modern, and user-friendly.</p>
+                </div>
 
-      <div class="feature">
-        <img src="images/git.png" alt="" />
+                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-sm">
+                    <div class="bg-[#468486]/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-[#468486] text-xl font-bold">03</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-[#284b63]">Development</h3>
+                    <p class="text-gray-600">I build the project with clean, responsive code so it works smoothly across devices and screens.</p>
+                </div>
 
-      </div>
+                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-sm">
+                    <div class="bg-[#468486]/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-[#468486] text-xl font-bold">04</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-[#284b63]">Delivery</h3>
+                    <p class="text-gray-600">I review the final details with you, refine what is needed, and help make the launch feel smooth and organized.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="feature">
-        <img src="images/github.png" alt="" />
+    <!-- Automation Section -->
+    <section id="automation" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-sm uppercase tracking-[0.3em] text-[#468486] mb-4">Automation</p>
+                <h2 class="text-3xl font-bold mb-4">Smart Workflows with Make</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Beyond websites, I can help design simple automations that connect tools and reduce manual work.
+                    This is an example of how a lead capture flow can move from inquiry to organized follow-up.
+                </p>
+            </div>
 
-      </div>
-      <div class="feature">
-        <img src="images/gitlab.png" alt="" />
+            <div class="bg-white rounded-3xl shadow-md border border-gray-200 p-8 md:p-10">
+                <div class="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-10 items-center">
+                    <div>
+                        <p class="text-sm uppercase tracking-[0.25em] text-[#468486] mb-4">Scenario Example</p>
+                        <h3 class="text-3xl font-bold text-[#284b63] mb-5">From lead capture to follow-up, automatically.</h3>
+                        <p class="text-gray-600 text-lg mb-8">
+                            I can design workflows that connect your website, email, scheduling tools, and lead tracking
+                            systems so inquiries move faster and your process feels organized from the start.
+                        </p>
 
-      </div>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-[#468486]/10 w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i data-feather="zap" class="text-[#468486] w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#284b63]">Less manual work</h4>
+                                    <p class="text-gray-600">Automate repetitive steps after someone submits a form.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-[#468486]/10 w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i data-feather="clock" class="text-[#468486] w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#284b63]">Faster response time</h4>
+                                    <p class="text-gray-600">Instant alerts and better lead handling without delays.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-[#468486]/10 w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i data-feather="grid" class="text-[#468486] w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#284b63]">Connected tools</h4>
+                                    <p class="text-gray-600">Website, Make, email, CRM, spreadsheets, and Calendly working together.</p>
+                                </div>
+                            </div>
+                        </div>
 
-      <div class="feature">
-        <img src="images/tex.png" alt="" />
+                        <a href="#schedule"
+                            class="inline-flex items-center justify-center bg-[#468486] hover:bg-[#284b63] text-white px-6 py-3 rounded-lg font-medium transition duration-300">
+                            Ask About Automation
+                        </a>
+                    </div>
 
-      </div>
+                    <div class="relative rounded-[2rem] overflow-hidden bg-[#16313f] p-6 md:p-8 min-h-[430px] shadow-xl">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(84,157,160,0.35),_transparent_30%),radial-gradient(circle_at_bottom_left,_rgba(255,255,255,0.08),_transparent_25%)]"></div>
 
-      <div class="feature">
-        <img src="images/mysql.png" alt="" />
+                        <div class="relative h-full min-h-[380px]">
+                            <div class="absolute left-4 top-8 w-[42%] rounded-2xl bg-white/95 p-4 shadow-lg automation-float">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="text-xs uppercase tracking-[0.2em] text-gray-400">Trigger</span>
+                                    <i data-feather="message-square" class="text-[#468486] w-4 h-4"></i>
+                                </div>
+                                <p class="font-bold text-[#284b63] mb-1">New website lead</p>
+                                <p class="text-sm text-gray-600">Name, email, service and project details submitted.</p>
+                            </div>
 
-      </div>
+                            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 rounded-[2rem] bg-[#468486] text-white shadow-2xl flex flex-col items-center justify-center automation-float-delay">
+                                <span class="text-xs uppercase tracking-[0.2em] text-white/70 mb-1">Router</span>
+                                <span class="text-lg font-bold">Make</span>
+                            </div>
 
+                            <div class="absolute right-4 top-8 w-[38%] rounded-2xl bg-white/95 p-4 shadow-lg automation-float">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="text-xs uppercase tracking-[0.2em] text-gray-400">Output</span>
+                                    <i data-feather="mail" class="text-[#468486] w-4 h-4"></i>
+                                </div>
+                                <p class="font-bold text-[#284b63] mb-1">Email alert</p>
+                                <p class="text-sm text-gray-600">Instant notification sent to your inbox.</p>
+                            </div>
 
-      <div class="feature">
-        <img src="images/postgre.png" alt="" />
+                            <div class="absolute left-8 bottom-8 w-[38%] rounded-2xl bg-white/95 p-4 shadow-lg automation-float-delay">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="text-xs uppercase tracking-[0.2em] text-gray-400">Storage</span>
+                                    <i data-feather="database" class="text-[#468486] w-4 h-4"></i>
+                                </div>
+                                <p class="font-bold text-[#284b63] mb-1">Lead tracker</p>
+                                <p class="text-sm text-gray-600">Save contact data in CRM or spreadsheet.</p>
+                            </div>
 
-      </div>
+                            <div class="absolute right-8 bottom-8 w-[38%] rounded-2xl bg-white/95 p-4 shadow-lg automation-float">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="text-xs uppercase tracking-[0.2em] text-gray-400">Next step</span>
+                                    <i data-feather="calendar" class="text-[#468486] w-4 h-4"></i>
+                                </div>
+                                <p class="font-bold text-[#284b63] mb-1">Book a call</p>
+                                <p class="text-sm text-gray-600">Guide the lead directly into Calendly.</p>
+                            </div>
 
+                            <div class="absolute left-[33%] top-[24%] w-[17%] h-[2px] bg-gradient-to-r from-white/0 via-[#7bd0d3] to-white/0"></div>
+                            <div class="absolute right-[33%] top-[24%] w-[17%] h-[2px] bg-gradient-to-r from-white/0 via-[#7bd0d3] to-white/0"></div>
+                            <div class="absolute left-[28%] bottom-[27%] w-[22%] h-[2px] bg-gradient-to-r from-white/0 via-[#7bd0d3] to-white/0 rotate-[18deg]"></div>
+                            <div class="absolute right-[28%] bottom-[27%] w-[22%] h-[2px] bg-gradient-to-r from-white/0 via-[#7bd0d3] to-white/0 -rotate-[18deg]"></div>
 
-    </div>
-  </section>
+                            <div class="absolute left-[46%] top-[22%] w-3 h-3 rounded-full bg-[#9ee7e9] automation-pulse"></div>
+                            <div class="absolute right-[46%] top-[22%] w-3 h-3 rounded-full bg-[#9ee7e9] automation-pulse"></div>
+                            <div class="absolute left-[41%] bottom-[31%] w-3 h-3 rounded-full bg-[#9ee7e9] automation-pulse"></div>
+                            <div class="absolute right-[41%] bottom-[31%] w-3 h-3 rounded-full bg-[#9ee7e9] automation-pulse"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="quote" id="certification">
-    <blockquote class="container">
-      <p>Certificates</p>
-    </blockquote>
-    <div class=" feature images">
-      <img id="slide" src="images/php.png" alt="" />
-      <p> PHP Backend Course - SNPP</p>
-    </div>
-    <div class=" feature images">
-      <img id="slide" src="images/java.png" alt="" />
-      <p>Java Swing's Course - SNPP</p>
-    </div>
-    <div class=" feature images">
-      <img id="slide" src="images/android.png" alt="" />
-      <p>Mobile Programming Course- SNPP</p>
-    </div>
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="rounded-3xl border border-[#468486]/15 bg-[#f4fbfb] shadow-md p-8 md:p-10">
+                        <p class="text-sm uppercase tracking-[0.3em] text-[#468486] mb-4">Profile</p>
+                        <h3 class="text-3xl md:text-4xl font-bold text-[#284b63] leading-tight mb-5">Building thoughtful digital work with a clean, modern approach.</h3>
+                        <p class="text-lg text-gray-700 mb-8">
+                            I focus on combining design and development to create websites and digital experiences that feel clear, useful, and visually strong.
+                        </p>
 
-  </section>
+                        <div class="space-y-4">
+                            <div class="flex items-start justify-between gap-4 border-t border-[#468486]/10 pt-4">
+                                <p class="text-sm uppercase tracking-[0.2em] text-[#468486]">Experience</p>
+                                <p class="text-right text-gray-800 font-medium">2023 - Present</p>
+                            </div>
+                            <div class="flex items-start justify-between gap-4 border-t border-[#468486]/10 pt-4">
+                                <p class="text-sm uppercase tracking-[0.2em] text-[#468486]">Background</p>
+                                <p class="text-right text-gray-800 font-medium">Consulting and freelance projects</p>
+                            </div>
+                            <div class="flex items-start justify-between gap-4 border-t border-[#468486]/10 pt-4">
+                                <p class="text-sm uppercase tracking-[0.2em] text-[#468486]">Focus</p>
+                                <p class="text-right text-gray-800 font-medium">UI/UX Design, Web Development, Responsive Experiences</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+                    <p class="text-gray-600 mb-6">
+                        Since 2023, I've been building experience in design and development through my work with a
+                        Spanish consulting firm and freelance projects like the ones featured in the Services section.
+                        My approach combines creativity and technical skills to create digital solutions that are both
+                        visually strong and functional.
+                    </p>
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold mb-4">My Skills</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-gray-100 px-4 py-2 rounded-full text-sm font-medium">UI/UX Design</span>
+                            <span class="bg-gray-100 px-4 py-2 rounded-full text-sm font-medium">Web Development</span>
+                            <span class="bg-gray-100 px-4 py-2 rounded-full text-sm font-medium">Mobile Design</span>
+                            <span class="bg-gray-100 px-4 py-2 rounded-full text-sm font-medium">Branding</span>
+                            <span class="bg-gray-100 px-4 py-2 rounded-full text-sm font-medium">Illustration</span>
+                            <span class="bg-gray-100 px-4 py-2 rounded-full text-sm font-medium">Prototyping</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Work Experience</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-bold">Web Developer at OpenSistemas</h4>
+                                <p class="text-gray-600">2023 - 2024</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Freelance Web Developer</h4>
+                                <p class="text-gray-600">2024 - Present</p>
+                                <p class="text-gray-600 text-sm">Worked on freelance projects and collaborated with AGM Agencia Web.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <div class="container" id="contact">
-      <ul>
-        <li><a href="#home">About me</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#habilities">Habilities</a></li>
-        <li><a href="#certification">Certificates</a></li>
-        <li><a href="#contact">Contact me</a></li>
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Client Testimonials</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">What my clients say about working with me</p>
+            </div>
 
-      </ul>
-      <p>&copy; Fiorella Moreschi</p>
-    </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/200x200/5" alt="Client"
+                            class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Maira Lopez</h4>
+                            <p class="text-gray-600 text-sm">Designer, AGM Agency</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Working with Fiorella was an absolute pleasure. She was always professional, collaborative,
+                        and committed to delivering high-quality work. Her development skills made the whole process
+                        smoother and helped bring our projects to life."
+                    </p>
+                    <div class="flex mt-4">
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 fill-current"></i>
+                    </div>
+                </div>
 
-    <div class="container" id="contact">
-      <ul>
-        <li><a href="https://www.linkedin.com/in/gianina-benitez" target="_blank" rel="noopener noreferrer"><img
-              src="https://img.icons8.com/color/30/000000/linkedin.png" />
-          </a></li>
-        <li><a href="https://github.com/moreschifio17" target="_blank" rel="noopener noreferrer"><img
-              src="https://img.icons8.com/ios-glyphs/30/000000/github.png" /></a></li>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/200x200/6" alt="Client"
+                            class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Filip Stanciu</h4>
+                            <p class="text-gray-600 text-sm">Founder, QuantPerks</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Fiore helped me build quantperks.com and guided me throughout the process. She was always
+                        supportive and solved issues related to design, payment gateways, and much more. Everything
+                        went very smoothly, and the price-to-quality ratio was unbeatable. I highly recommend her."
+                    </p>
+                    <div class="flex mt-4">
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 fill-current"></i>
+                    </div>
+                </div>
 
-      </ul>
-    </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/200x200/7" alt="Client"
+                            class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">CELE</h4>
+                            <p class="text-gray-600 text-sm">Institutional Website Project, in collaboration with AGM</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Fiore was part of the development of our website, and the result was excellent:
+                        professionalism, modern design, and a website that perfectly represents our institution."
+                    </p>
+                    <div class="flex mt-4">
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5 fill-current"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </footer>
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-md p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#468486]/10 mb-5">
+                        <i data-feather="calendar" class="text-[#468486] w-6 h-6"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-4">Schedule a Meeting</h2>
+                    <p class="text-gray-600 text-lg">
+                        Prefer to talk directly? Book a 30-minute meeting through Calendly and let's discuss your
+                        project, ideas, or next steps.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a id="calendlyLink" href="https://calendly.com/fioreschidev/30min" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center bg-[#468486] hover:bg-[#284b63] text-white px-8 py-4 rounded-lg font-medium transition duration-300">
+                        Book on Calendly
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ready to start your project? You can reach me directly by email or book a meeting through Calendly.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="bg-gray-50 border border-gray-200 rounded-3xl p-8 md:p-10 shadow-sm h-full">
+                        <p class="text-sm uppercase tracking-[0.25em] text-[#468486] mb-4">Direct Contact</p>
+                        <h3 class="text-3xl font-bold text-[#284b63] mb-5">Let's talk about your next project.</h3>
+                        <p class="text-gray-600 text-lg mb-8">
+                            I am keeping the contact experience simple for now. The best way to reach me is by email or by booking a meeting directly through Calendly.
+                        </p>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start gap-4 rounded-2xl bg-white p-5 border border-gray-200">
+                                <div class="bg-[#468486]/10 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i data-feather="mail" class="text-[#468486] w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm uppercase tracking-[0.2em] text-gray-500 mb-2">Email</p>
+                                    <a href="mailto: fioreschidev@gmail.com" class="font-medium text-[#284b63] hover:text-[#468486]"> fioreschidev@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 rounded-2xl bg-white p-5 border border-gray-200">
+                                <div class="bg-[#468486]/10 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i data-feather="calendar" class="text-[#468486] w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm uppercase tracking-[0.2em] text-gray-500 mb-2">Meeting</p>
+                                    <p class="text-gray-600">Book a quick call to discuss your idea, timeline, and next steps.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#schedule"
+                            class="inline-flex items-center justify-center bg-[#468486] hover:bg-[#284b63] text-white px-6 py-3 rounded-lg font-medium transition duration-300">
+                            Book a Call
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-100 p-8 rounded-xl h-full">
+                        <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-[#468486]/10 w-10 h-10 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-feather="mail" class="text-[#468486] w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-700">Email</h4>
+                                    <a href="mailto: fioreschidev@gmail.com" class="text-gray-600 hover:text-[#468486]"> fioreschidev@gmail.com</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-12">
+                            <h3 class="text-xl font-bold mb-6">Find Me On</h3>
+                            <div class="flex space-x-4">
+
+                                <a href="https://www.linkedin.com/in/gianina-benitez/" target="_blank" rel="noopener noreferrer"
+                                    class="bg-gray-200 hover:bg-blue-600 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i data-feather="linkedin" class="w-5 h-5"></i>
+                                </a>
+                                <a href="https://www.behance.net/fioreschi" target="_blank" rel="noopener noreferrer"
+                                    class="bg-gray-200 hover:bg-[#1769ff] hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <span class="text-sm font-bold">Be</span>
+                                </a>
+                                <a href="https://github.com/moreschifio17" target="_blank" rel="noopener noreferrer"
+                                    class="bg-gray-200 hover:bg-gray-800 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i data-feather="github" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <span class="text-xl font-bold">Fioreschi Dev</span>
+                    <p class="text-gray-400 mt-4 max-w-xs">
+                        Creating beautiful digital experiences that drive results for your business.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider mb-4">Navigation</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                            <li><a href="#projects" class="text-gray-400 hover:text-white">Projects</a></li>
+                            <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                            <li><a href="#schedule" class="text-gray-400 hover:text-white">Schedule</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider mb-4">Services</h3>
+                        <ul class="space-y-2">
+                            <li><a href="https://calendly.com/fioreschidev/30min" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">UI/UX Design</a></li>
+                            <li><a href="https://calendly.com/fioreschidev/30min" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">Web Development</a></li>
+                            <li><a href="https://calendly.com/fioreschidev/30min" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">Mobile App Design</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-center items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2026 Fioreschi Dev. All rights reserved.
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const CONFIG_INDEX = {
+            calendlyUrl: 'https://calendly.com/fioreschidev/30min'
+        };
+
+        feather.replace();
+
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const calendlyLink = document.querySelector('#calendlyLink');
+        const mobileMenu = document.createElement('div');
+
+        mobileMenu.className = 'mobile-menu hidden md:hidden fixed inset-0 bg-white z-50 p-6';
+        mobileMenu.innerHTML = `
+            <div class="flex justify-between items-center mb-8">
+                <span class="text-xl font-bold gradient-text">Fioreschi Dev</span>
+                    <button class="mobile-menu-close p-2 rounded-md text-gray-700 hover:text-[#468486]">
+<i data-feather="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-6">
+                        <a href="#home" class="text-gray-900 hover:text-[#468486] px-3 py-2 text-lg font-medium">Home</a>
+                        <a href="#projects" class="text-gray-900 hover:text-[#468486] px-3 py-2 text-lg font-medium">Projects</a>
+                        <a href="#services" class="text-gray-900 hover:text-[#468486] px-3 py-2 text-lg font-medium">Services</a>
+                        <a href="#schedule" class="text-gray-900 hover:text-[#468486] px-3 py-2 text-lg font-medium">Schedule</a>
+                        <a href="#about" class="text-gray-900 hover:text-[#468486] px-3 py-2 text-lg font-medium">About</a>
+                        <a href="#contact" class="text-gray-900 hover:text-[#468486] px-3 py-2 text-lg font-medium">Contact</a>
+</div>
+        `;
+        document.body.appendChild(mobileMenu);
+
+        // Open the mobile navigation menu.
+        function openMobileMenu() {
+            console.log('[openMobileMenu] Opening mobile menu');
+            mobileMenu.classList.remove('hidden');
+            feather.replace();
+            document.querySelector('.mobile-menu-close').addEventListener('click', closeMobileMenu);
+        }
+
+        // Close the mobile navigation menu.
+        function closeMobileMenu() {
+            console.log('[closeMobileMenu] Closing mobile menu');
+            mobileMenu.classList.add('hidden');
+        }
+
+        // Apply the Calendly link from config.
+        function applyCalendlyLink() {
+            console.log('[applyCalendlyLink] Applying Calendly URL');
+            calendlyLink.href = CONFIG_INDEX.calendlyUrl;
+        }
+
+        // Scroll to in-page sections smoothly.
+        function handleAnchorClick(event) {
+            console.log('[handleAnchorClick] Scrolling to page section');
+            event.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+            closeMobileMenu();
+        }
+
+        applyCalendlyLink();
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', handleAnchorClick);
+        });
+    </script>
 </body>
 
 </html>
