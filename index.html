@@ -66,6 +66,39 @@
         .automation-pulse {
             animation: pulseAutomation 2s ease-in-out infinite;
         }
+
+        .testimonial-avatar {
+            width: 3.25rem;
+            height: 3.25rem;
+            min-width: 3.25rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+            font-size: 0.82rem;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: 0.04em;
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 18px rgba(40, 75, 99, 0.12);
+        }
+
+        .testimonial-avatar-maira {
+            background: linear-gradient(135deg, #d9eeea, #9bcac1);
+            color: #284b63;
+        }
+
+        .testimonial-avatar-filip {
+            background: linear-gradient(135deg, #dbe5f8, #8aa7e6);
+            color: #21364d;
+        }
+
+        .testimonial-avatar-cele {
+            background: linear-gradient(135deg, #efe2cb, #d0a56f);
+            color: #5f4420;
+        }
     </style>
 </head>
 
@@ -491,8 +524,7 @@
                 <!-- Testimonial 1 -->
                 <div class="bg-white p-8 rounded-xl shadow-md">
                     <div class="flex items-center mb-4">
-                        <img src="http://static.photos/people/200x200/5" alt="Client"
-                            class="w-12 h-12 rounded-full mr-4">
+                        <div class="testimonial-avatar testimonial-avatar-maira" aria-label="Maira Lopez">ML</div>
                         <div>
                             <h4 class="font-bold">Maira Lopez</h4>
                             <p class="text-gray-600 text-sm">Designer, AGM Agency</p>
@@ -515,8 +547,7 @@
                 <!-- Testimonial 2 -->
                 <div class="bg-white p-8 rounded-xl shadow-md">
                     <div class="flex items-center mb-4">
-                        <img src="http://static.photos/people/200x200/6" alt="Client"
-                            class="w-12 h-12 rounded-full mr-4">
+                        <div class="testimonial-avatar testimonial-avatar-filip" aria-label="Filip Stanciu">FS</div>
                         <div>
                             <h4 class="font-bold">Filip Stanciu</h4>
                             <p class="text-gray-600 text-sm">Founder, QuantPerks</p>
@@ -539,8 +570,7 @@
                 <!-- Testimonial 3 -->
                 <div class="bg-white p-8 rounded-xl shadow-md">
                     <div class="flex items-center mb-4">
-                        <img src="http://static.photos/people/200x200/7" alt="Client"
-                            class="w-12 h-12 rounded-full mr-4">
+                        <div class="testimonial-avatar testimonial-avatar-cele" aria-label="CELE representative">CE</div>
                         <div>
                             <h4 class="font-bold">CELE</h4>
                             <p class="text-gray-600 text-sm">Institutional Website Project, in collaboration with AGM</p>
